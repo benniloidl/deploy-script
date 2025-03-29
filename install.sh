@@ -12,7 +12,9 @@ if [[ ! -f "$file" ]] then
 fi
 
 # Prompt the User to Add the SSH Key to GitHub
+echo "COPY FROM HERE >"
 cat ~/.ssh/id_rsa.pub
+echo "< COPY TO HERE"
 echo "Copy the output and add it to GitHub → Settings → SSH and GPG keys → New SSH Key. Press Enter to continue (or Ctrl+C to exit).."
 
 # Clone Your Repository
