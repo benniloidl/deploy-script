@@ -5,11 +5,9 @@ echo "Installing Required Packages.."
 sudo apt update && sudo apt install -y git nodejs npm
 sudo npm install -g pm2
 
-# Generate SSH Key (if none exists already)
-if [[ ! -f "$file" ]] then
-    echo "Generating SSH Key.."
-    ssh-keygen -t rsa -b 4096 -N "" -f ~/.ssh/id_rsa
-fi
+# Generate SSH Key
+echo "Generating SSH Key.."
+ssh-keygen -t rsa -b 4096 -N "" -f ~/.ssh/id_rsa
 
 # Prompt the User to Add the SSH Key to GitHub
 echo "COPY FROM HERE >"
